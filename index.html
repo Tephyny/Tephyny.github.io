@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEPH'S WORLD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/favicon2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <audio id="loading-sound" src="https://assets.mixkit.co/active_storage/sfx/134/134-preview.mp3"></audio>
+    <audio id="click-sound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+    <audio id="bg-music" loop>
+        <source src="assets/Bg_Music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-control" class="music-toggle music-off" onclick="toggleMusic()">
+        <span id="music-icon">♩</span>
+    </button>
+
+    <div id="loader-screen">
+        <div class="loader-minimal-content">
+            <p id="loader-text">WARMING UP...</p>
+            <div class="loader-bar-container">
+                <div id="loader-bar"></div>
+            </div>
+            <p id="progress-percent">0%</p>
+        </div>
+    </div>
+
+    <nav class="y2k-navbar-desktop glass-style">
+        <div class="logo">TEPHY.NY</div>
+        <div class="nav-links-wrapper">
+            <a href="#about" class="nav-link">ABOUT</a>
+            <a href="#skills" class="nav-link">SKILLS</a>
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
+        </div>
+    </nav>
+
+    <header class="mobile-header glass-style">
+        <div class="logo">TEPHY.NY</div>
+        <div id="nav-trigger" class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav class="side-drawer glass-style" id="side-nav">
+        <div class="drawer-links">
+            <a href="#about" class="nav-link">ABOUT</a>
+            <a href="#skills" class="nav-link">SKILLS</a>
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
+        </div>
+    </nav>
+
+    <main id="y2k-landing-page" class="hidden">
+        
+        <header class="nineties-hero-block">
+            <div class="hero-split-container">
+                <div class="hero-left-panel">
+                    <div class="y2k-badge">EST. 2026</div><br>
+                    <h1 class="nineties-main-title">
+                        <span class="outline-text">HEY THERE </span>
+                        <br>
+                        I'M STEPHANIE SHAWA
+                    </h1>
+                    <p class="nineties-description">
+                        A CREATIVE WITH A LOVE FOR DATA AND SHIPPING
+                    </p>
+                </div>
+
+                <div class="hero-right-panel">
+                    <div class="custom-tv-wrapper">
+                        <img src="assets/OldSchool_tv.png" class="tv-frame-overlay" alt="TV Frame">
+                        
+                        <div id="tv-screen" class="screen-off">
+                            <div class="slideshow-container">
+                                <img src="assets/pic2.png" class="slide active" alt="Slide 1">
+                                <img src="assets/pic1.png" class="slide" alt="Slide 2">
+                                
+                                <div class="crt-static"></div>
+                                <div class="crt-scanlines"></div>
+                                <div class="glass-glare"></div>
+                            </div>
+                        </div>
+
+                        <button id="tv-switch" class="discrete-power-btn" onclick="toggleTV()"></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    <section id="about" class="content-section">
+    <h2 class="section-title">ABOUT ME</h2>
+    
+    <div class="about-clean-container">
+        <div class="accent-line"></div>
+
+        <div class="about-body">
+            <p class="lead-text">
+                I’m a developer with front-end experience and a growing focus on <span class="text-highlight">data analysis</span>, building practical and user-focused tools through hands-on projects.
+            </p>
+
+            <p class="secondary-text">
+                I enjoy working with technology and data to create clear, usable solutions that support learning and informed decision-making. I have contributed to education-focused initiatives, including work with <strong>Junior Achievement (JA)</strong>, supporting youth-centered programs and gaining exposure to impact-driven, structured work environments.
+            </p>
+
+            <p class="secondary-text">
+                Currently, I’m strengthening my skills through continuous learning and project work, and I’m open to roles where I can contribute and grow. Outside of tech, I value <strong>animal welfare</strong> and the outdoors, which shapes my interest in thoughtful, ethical work.
+            </p>
+        </div>
+        
+        <div class="about-footer-simple">
+            // ARUSHA, TZ
+        </div>
+    </div>
+</section>
+
+        <section id="skills" class="content-section">
+            <h2 class="section-title">WHAT I USE</h2>
+            
+            <div class="skills-carousel-container">
+                <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+                
+                <div class="carousel-window">
+                    <div class="carousel-track">
+                        <div class="skill-card">
+                            <div class="card-header">LANGUAGES</div>
+                            <div class="icon-horizontal-list">
+                                <div class="icon-item"><i class="fab fa-python"></i><span>Python</span></div>
+                                <div class="icon-item"><i class="fab fa-js"></i><span>JS</span></div>
+                                <div class="icon-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="card-header">DATA ANALYTICS</div>
+                            <div class="icon-horizontal-list">
+                                <div class="icon-item"><i class="fas fa-chart-bar"></i><span>Pandas</span></div>
+                                <div class="icon-item"><i class="fas fa-microchip"></i><span>NumPy</span></div>
+                                 <div class="icon-item"><i class="fas fa-file-excel"></i><span>Excel</span></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="card-header">WEB & DESKTOP</div>
+                            <div class="icon-horizontal-list">
+                                <div class="icon-item"><i class="fab fa-html5"></i><span>HTML</span></div>
+                                <div class="icon-item"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                                <div class="icon-item"><i class="fas fa-desktop"></i><span>Electron</span></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="card-header">TOOLKIT</div>
+                            <div class="icon-horizontal-list">
+                                <div class="icon-item"><i class="fab fa-github"></i><span>Git & GitHub</span></div>
+                                <div class="icon-item"><i class="fas fa-file-code"></i><span>VS Code</span></div>
+                                <div class="icon-item"><i class="fas fa-palette"></i><span>Canva</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+            </div>
+
+            <div class="dots-container">
+                <span class="dot active" onclick="jumpToSlide(0)"></span>
+                <span class="dot" onclick="jumpToSlide(1)"></span>
+                <span class="dot" onclick="jumpToSlide(2)"></span>
+                <span class="dot" onclick="jumpToSlide(3)"></span>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2 class="section-title">PROJECTS</h2>
+            
+            <div class="projects-grid">
+                <a href="https://github.com/Tephyny/Mwema" class="project-card" target="_blank" rel="noopener noreferrer">
+                    <div class="project-image-placeholder">
+                        <img src="assets/kids_app.png" alt="Project 1">
+                    </div>
+                    <div class="project-info-bottom">
+                     <h3>MWEMA</h3>
+                     <p class="project-description">A playful desktop app that helps young children build good habits through colorful visuals, simple interactions, and short value-based lessons.</p>
+                    </div>
+                 </a>
+
+                 <a href="#" class="project-card">
+                    <div class="project-image-placeholder">
+                      <img src="assets/datanlysis.png" alt="Project 2">
+                   </div>
+                     <div class="project-info-bottom">
+                         <h3>DATA ANALYSIS</h3>
+                          <p class="project-description">Visualizing trends with Python.</p>
+                      </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section contact-section-modified">
+            <div class="contact-hub-container">
+                <h2 class="section-title">LET'S TALK</h2>
+                
+                <a href="https://cal.com/stephanie-shawa-l2ols8" class="cta-mail-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-paper-plane"></i>
+                    SEND A MESSAGE
+                </a>
+
+                <p class="contact-subtext">Find me on my socials</p>
+
+                <div class="social-tiles-grid">
+                    <a href="https://www.linkedin.com/in/stephanie-shawa-152442319" class="social-tile" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Tephyny" class="social-tile" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tephy.ny" class="social-tile" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="y2k-footer">
+            <p>TEPHYNY © 2026 </p>
+        </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
