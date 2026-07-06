@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 /* --- Global Palette: Retro-Futurist Solar --- */
 :root {
     --color-pink-bg: #F4F1DE;      /* Warm Architectural Cream */
@@ -659,17 +662,16 @@ a:hover, button:hover, .nav-link:hover, .discrete-power-btn:hover {
 .landing-visible { opacity: 1 !important; transform: translateY(0) !important; }
 
 
-
 #about {
     padding: 80px 20px;
 }
-
 
 .about-clean-container {
     max-width: 750px;
     margin: 0 auto;
     padding: 20px;
-    text-align: left;
+    /* Changed from left to justify for that clean block look */
+    text-align: justify; 
 }
 
 .accent-line {
@@ -688,10 +690,12 @@ a:hover, button:hover, .nav-link:hover, .discrete-power-btn:hover {
 
 .lead-text {
     font-family: var(--font-body);
-    font-size: 1.4rem; /* Larger and impactful */
+    font-size: 1.4rem;
     line-height: 1.6;
     color: var(--color-blue);
     font-weight: 600;
+    /* Added here too to ensure the lead text matches the container */
+    text-align: justify;
 }
 
 .secondary-text {
@@ -699,12 +703,16 @@ a:hover, button:hover, .nav-link:hover, .discrete-power-btn:hover {
     font-size: 1.05rem;
     line-height: 1.8;
     color: var(--color-blue);
-    opacity: 0.85; /* Slightly softer for secondary info */
+    opacity: 0.85;
+    text-align: justify;
 }
 
 .text-highlight {
     color: var(--color-purple);
-    border-bottom: 1px solid var(--color-purple);
+    /* Removed the border-bottom (underline) */
+    border-bottom: none; 
+    /* Optional: making it bold since the underline is gone helps it pop */
+    font-weight: 600; 
 }
 
 .about-footer-simple {
@@ -714,6 +722,9 @@ a:hover, button:hover, .nav-link:hover, .discrete-power-btn:hover {
     letter-spacing: 2px;
     color: var(--color-blue);
     opacity: 0.4;
+    /* Footers usually look better left-aligned or centered, 
+       but keep it justify if you want total consistency */
+    text-align: left; 
 }
 
 @keyframes status-pulse {
